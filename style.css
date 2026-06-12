@@ -47,24 +47,6 @@ body{
         height: auto;
     }
 }
-
-body:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100vh;
-    background: linear-gradient(to right, #e6a94d5e, transparent);
-    z-index: 10;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-body.open:before {
-    opacity: 1;
-}
-
 .menubutton {
     position: fixed;
     cursor: pointer;
@@ -79,12 +61,6 @@ body.open:before {
 }
 .menubutton:hover {
     transform: translateX(15px);
-}
-.menucontentwrapper .toggleinput {
-    display: none;
-}
-.toggle-input:checked + .menubutton {
-    transform: rotate(180deg);
 }
 .menucontents a {
     font-family: 'Stack Sans Headline';
