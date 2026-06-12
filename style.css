@@ -47,7 +47,26 @@ body{
         height: auto;
     }
 }
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(to right, #e6a94d5e, transparent);
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+body.open:before {
+    opacity: 1;
+}
+
 .menubutton {
+    position: fixed;
     cursor: pointer;
     margin: 10px;
     border: 2px solid none;
@@ -77,14 +96,17 @@ body{
     text-decoration: none;
     width: fit-content;
     
-    transform: translateX(-25px);
+    transform: translateX(-150px);
     opacity: 0;
 
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 .menucontents.open a {
     transform: translateX(0);
     opacity: 1;
+}
+.menucontents a:first-child {
+    margin-top: 57px;
 }
 .menucontents a:last-child {
     margin-bottom: 0px;
