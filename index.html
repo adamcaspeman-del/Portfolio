@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Adam Caspe</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
 <body>
-    <div class="name">
-        <p class="name-p">Adam Caspe</p>
+    <div class="menubutton">
+        <button type="button" style="background: transparent; border: none; font-family: 'Arimo Nerd Font'; font-size: 30px;" onclick="toggleMenu()">󰁔</button>
     </div>
-    <div class="undername-bar">
-        
+    <div class="menucontents" id="sideMenu">
+        <a href="#Home">Home Page</a>
+        <a href="#Projects">Projects</a>
+        <a class="menudivider">●</a>
+        <a href="#WhoAmI">About</a>
+        <a href="#Contact">Contact</a>
     </div>
-    <div class="background">
-        <img src="Assets/Images/thing.png" alt="background">
+    <div class="name-wrap">
+        <div class="name">
+            <p class="name-p">Adam Caspe</p>
+        </div>
+        <div class="subtitle">
+            <p class="name-ps">Portfolio</p>
+        </div>
     </div>
+    <script>
+        function toggleMenu() {
+        // 1. Find the menu element by its ID
+        const menu = document.getElementById("sideMenu");
+    
+        // 2. Toggle the "open" class
+        menu.classList.toggle("open");
+        }
+    </script>
 </body>
 </html>

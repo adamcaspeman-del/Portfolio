@@ -1,26 +1,104 @@
+@font-face {
+    font-family: 'Pavot';
+    src: url(Assets/Fonts/Pavot-Regular.otf);
+}
+@font-face {
+    font-family: 'Pavot Bold';
+    src: url(Assets/Fonts/Pavot-Bold.otf);
+}
+@font-face {
+    font-family: 'Arimo Nerd Font';
+    src: url(Assets/Fonts/ArimoNerdFont-Regular.ttf);
+}
 body{
     height: 100vh;
     display: grid;
+    background-image: url(Assets/Images/thing.png);
+    background-size: 100%;
 }
 
 .name{
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
-    
-
+    place-content: center;
+    justify-content: center;
 }
 .name-p{
-    font-size: 20px;
+    display: flex;
+    font-size: 70px;
     font-weight: 500;
     font-family: 'Stack Sans Headline';
+    justify-content: center;
     
+}
+.name-ps{
+    display: flex;
+    justify-content: center;
+    font-family: 'Stack Sans Headline';
+    font-size: 30px;
 }
 .undername-bar{
     background-color: rgb(232, 162, 65);
+    max-height: 5px;
 }
 .background{
     img{
-        max-width: 500px;
+        max-width: 700px;
         height: auto;
     }
 }
+.menubutton {
+    cursor: pointer;
+    margin: 10px;
+    border: 2px solid none;
+    background: transparent;
+    outline: none;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transition: transform 0.4s ease-in-out;
+}
+.menubutton:hover {
+    transform: translateX(15px);
+}
+.menucontentwrapper .toggleinput {
+    display: none;
+}
+.toggle-input:checked + .menubutton {
+    transform: rotate(180deg);
+}
+.menucontents a {
+    font-family: 'Stack Sans Headline';
+    font-size: 30px;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    color: black;
+    text-decoration: none;
+    width: fit-content;
+    
+    transform: translateX(-25px);
+    opacity: 0;
+
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.menucontents.open a {
+    transform: translateX(0);
+    opacity: 1;
+}
+.menucontents a:last-child {
+    margin-bottom: 0px;
+}
+.menucontents a:hover {
+    transform: translateX(7px);
+}
+.menucontents .menudivider {
+    font-family: 'Stack Sans Headline';
+    font-size: 30px;
+    margin-left: 20px;
+}
+.menucontents.open a:nth-child(1) {transition-delay: 0.4s;}
+.menucontents.open a:nth-child(2) {transition-delay: 0.3s;}
+.menucontents.open a:nth-child(4) {transition-delay: 0.2s;}
+.menucontents.open a:nth-child(5) {transition-delay: 0.1s;}
+.menucontents a:nth-child(3) {transform: none; transition-delay: 0.3s;}
