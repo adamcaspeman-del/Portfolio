@@ -1,0 +1,45 @@
+.ProjectsContainter{
+    display: flex;
+    position: relative;
+    height: 1000px;
+}
+.Projects{
+    position: sticky;
+    top: 3px;
+    font-family: 'Stack Sans Headline';
+    font-size: 50px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    margin-left: 67px;
+    z-index: 3;
+    align-self: start;
+}
+.ProjectsParagraph{
+    display: none;
+    position: absolute;
+    font-family: 'Stack Sans Headline';
+    z-index: 1;
+    padding-top: 115px;
+}
+.carousel1container{
+    width: 100vh;
+    margin: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.carousel1container::-webkit-scrollbar{
+    display: none;
+}
+.carousel1track{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+.carousel1item{
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    scroll-snap-align: center;
+}

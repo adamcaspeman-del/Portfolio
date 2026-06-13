@@ -16,7 +16,9 @@ body{
     background-image: url(Assets/Images/thing.png);
     background-size: 100%;
 }
-
+.name-wrap{
+    padding-top: 60px;
+}
 .name{
     display: flex;
     grid-template-columns: 1fr 1fr;
@@ -58,9 +60,13 @@ body{
     width: fit-content;
     height: fit-content;
     transition: transform 0.4s ease-in-out;
+    z-index: 2;
 }
 .menubutton:hover {
     transform: translateX(15px);
+}
+.menucontents{
+    position: fixed;
 }
 .menucontents a {
     font-family: 'Stack Sans Headline';
@@ -82,7 +88,7 @@ body{
     opacity: 1;
 }
 .menucontents a:first-child {
-    margin-top: 57px;
+    margin-top: 67px;
 }
 .menucontents a:last-child {
     margin-bottom: 0px;
@@ -100,3 +106,13 @@ body{
 .menucontents.open a:nth-child(4) {transition-delay: 0.2s;}
 .menucontents.open a:nth-child(5) {transition-delay: 0.1s;}
 .menucontents a:nth-child(3) {transform: none; transition-delay: 0.3s;}
+.topbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
