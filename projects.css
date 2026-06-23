@@ -1,7 +1,8 @@
 .ProjectsContainter{
-    display: flex;
-    position: relative;
-    height: 1000px;
+    display: grid;
+    position: fixed;
+    height: auto;
+    align-items: center;
 }
 .Projects{
     position: sticky;
@@ -10,24 +11,33 @@
     font-size: 50px;
     font-weight: 300;
     color: rgb(0, 0, 0);
-    margin-left: 67px;
-    z-index: 3;
+    z-index: 4;
     align-self: start;
+    text-align: center;
+    width: auto;
 }
 .ProjectsParagraph{
-    display: none;
+    display: flex;
     position: absolute;
     font-family: 'Stack Sans Headline';
     z-index: 1;
-    padding-top: 115px;
+    padding-top: 550px;
+    width: auto;
+    margin-left: 300px;
+    margin-right: 300px;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
 }
 .carousel1container{
     width: 100vh;
-    margin: auto;
+    height: 1000px;
+    margin: 0 auto;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    z-index: 2;
 }
 .carousel1container::-webkit-scrollbar{
     display: none;
@@ -36,10 +46,18 @@
     display: flex;
     gap: 20px;
     padding: 10px;
+    z-index: 2;
 }
 .carousel1item{
     height: 400px;
     object-fit: cover;
     border-radius: 12px;
     scroll-snap-align: center;
+    z-index: 2;
+}
+.topbar{
+    z-index: 3;
+}
+.menucontents{
+    z-index: 3;
 }
